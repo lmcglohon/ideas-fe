@@ -1,0 +1,11 @@
+<form onsubmit={{action this.saveIdea}}>
+  <div>
+    Summary:
+    <Textarea @value={{this.summary}} />
+  </div>
+  <div>
+    Quote:
+    <Textarea @value={{this.quote}} />
+  </div>
+  <button type="submit">Add Idea</button>
+</form>

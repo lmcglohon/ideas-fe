@@ -1,22 +1,25 @@
-# ideas-fe
+# IdeasFe
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Frontend client for Ideas, an app for grouping quotes into conceptual ideas.
+
+Implemented with Ember.js using the preview version of the upcoming [Octane edition](https://emberjs.com/editions/octane/). This app will be kept up-to-date with the latest Octane features and serves as a good example of a "typical" Ember app using Octane.
+
+Powered by a Rails JSON:API backend, [ideas-api](https://github.com/lmcglohon/ideas-api).
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
+* [Node.js](https://nodejs.org/)
+* [Yarn](https://yarnpkg.com/)
 * [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
 
 ## Installation
 
 * `git clone <repository-url>` this repository
 * `cd ideas-fe`
-* `npm install`
+* `yarn install`
 
 ## Running / Development
 
@@ -35,9 +38,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `yarn lint:hbs`
+* `yarn lint:js`
+* `yarn lint:js --fix`
 
 ### Building
 

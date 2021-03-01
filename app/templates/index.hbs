@@ -1,0 +1,8 @@
+<NewIdeaForm />
+
+{{#each @model as |idea|}}
+  <div>
+    <h2>{{idea.summary}}</h2>
+    <p>{{idea.quote}}</p>
+  </div>
+{{/each}}

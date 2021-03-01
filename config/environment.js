@@ -10,6 +10,10 @@ module.exports = function (environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
+        EMBER_NATIVE_DECORATOR_SUPPORT: true,
+        EMBER_METAL_TRACKED_PROPERTIES: true,
+        EMBER_GLIMMER_ANGLE_BRACKET_NESTED_LOOKUP: true,
+        EMBER_GLIMMER_ANGLE_BRACKET_BUILT_INS: true,
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
@@ -29,6 +33,12 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV.apiHost = 'http://localhost:3000';
+
+    ENV['ember-cli-mirage'] = {
+      enabled: false,
+    };
   }
 
   if (environment === 'test') {
@@ -43,8 +53,9 @@ module.exports = function (environment) {
     ENV.APP.autoboot = false;
   }
 
+  // eslint-disable-next-line no-empty
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    ENV.apiHost = 'https://ciw-ideas-api.herokuapp.com';
   }
 
   return ENV;
